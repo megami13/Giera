@@ -48,3 +48,9 @@ TagManager:
   - name: Knight
     uniqueID: 3194035595
     locked: 0
+  - name: WorldObjects
+    uniqueID: 1550547223
+    locked: 0
+  - name: UI
+    uniqueID: 607011217
+    locked: 0

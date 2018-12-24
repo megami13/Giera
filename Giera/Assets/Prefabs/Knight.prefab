@@ -32,6 +32,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1507753571886906
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4365499411001438}
+  m_Layer: 0
+  m_Name: HitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1602571245257128
 GameObject:
   m_ObjectHideFlags: 1
@@ -79,6 +94,19 @@ Transform:
   m_Father: {fileID: 4604890530901154}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4365499411001438
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1507753571886906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4729047216355402}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4604890530901154
 Transform:
   m_ObjectHideFlags: 1
@@ -102,7 +130,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4365499411001438}
   m_Father: {fileID: 4238916028443932}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -205,6 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71082e3b6e55c4a48a6ef0dc6346f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knightController: {fileID: 114970425351146938}
+  damageToGive: 5
+  damageBurst: {fileID: 1271329743604370, guid: 55026a2c4e350414587f75845b1c506f,
+    type: 2}
+  hitPoint: {fileID: 4365499411001438}
+  damageNumber: {fileID: 1912948352984876, guid: 6acc4a5112cc75844be2122603e3cc9f,
+    type: 2}
 --- !u!114 &114928548504889964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,6 +266,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  attacking: 0
+  attackTime: 0.6
+  attackTimeCounter: 0
 --- !u!212 &212197575236654534
 SpriteRenderer:
   m_ObjectHideFlags: 1
